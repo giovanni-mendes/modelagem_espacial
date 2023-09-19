@@ -24,6 +24,13 @@ st.markdown(
 
 st.video('https://www.youtube.com/watch?v=IxisjjHDn7A&embeds_referring_euri=https%3A%2F%2Fwww.firjan.com.br%2F&source_ve_path=MjM4NTE&feature=emb_title&ab_channel=Firjan',  start_time=0)
 
+URL_STRING = "https://streamlit.io/"
+
+st.markdown(
+    f'<a href="{URL_STRING}" style="display: inline-block; padding: 12px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; font-size: 16px; border-radius: 4px;">Action Text on Button</a>',
+    unsafe_allow_html=True
+)
+
 btn = st.button('Acesse a Base de Dados')
 if btn:
     webbrowser.open_new('https://www.firjan.com.br/ifdm/')
