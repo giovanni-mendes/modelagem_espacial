@@ -8,7 +8,7 @@ import json
 
 @st.cache_data
 def gerar_df():
-    df = pd.read_excel('datasets\IFDM_visualizacao.xlsx')
+    df = pd.read_excel('datasets/IFDM_visualizacao.xlsx')
     return df
 
 
