@@ -24,9 +24,6 @@ st.markdown(
 
 st.video('https://www.youtube.com/watch?v=IxisjjHDn7A&embeds_referring_euri=https%3A%2F%2Fwww.firjan.com.br%2F&source_ve_path=MjM4NTE&feature=emb_title&ab_channel=Firjan',  start_time=0)
 
-link = '[GitHub](http://github.com)'
-st.markdown(link, unsafe_allow_html=True)
-
 btn = st.button('Acesse a Base de Dados')
 if btn:
     webbrowser.open_new('https://www.firjan.com.br/ifdm/')
