@@ -26,7 +26,7 @@ st.video('https://www.youtube.com/watch?v=IxisjjHDn7A&embeds_referring_euri=http
 
 btn = st.button('Acesse a Base de Dados')
 if btn:
-    webbrowser.open_new_tab('https://www.firjan.com.br/ifdm/')
+    webbrowser.open_new('https://www.firjan.com.br/ifdm/')
 
 st.write("## Autor")
 
@@ -34,18 +34,16 @@ st.markdown('Desenvolvido por Giovanni Mendes Lima')
 btn_2 = st.button('Acesse meu GitHub')
 
 if btn_2:
-    webbrowser.open_new_tab('https://github.com/giovanni-mendes')
+    webbrowser.open_new('https://github.com/giovanni-mendes')
 
 btn_3 = st.button('Notebook do Google Colab')
 if btn_3:
-    webbrowser.open_new_tab(
-        'https://colab.research.google.com/drive/1ek8NBTldiTL33ycftvMLjusD5U_pYI3w?usp=sharing')
+    webbrowser.open_new('https://colab.research.google.com/drive/1ek8NBTldiTL33ycftvMLjusD5U_pYI3w?usp=sharing')
 
 btn_4 = st.button(
     'Artigo aplicando os dados do IFDM em uma regressão linear múltipla')
 if btn_4:
-    webbrowser.open_new_tab(
-        'https://publicacoes.unifal-mg.edu.br/revistas/index.php/cei/article/view/2159')
+    webbrowser.open_new('https://publicacoes.unifal-mg.edu.br/revistas/index.php/cei/article/view/2159')
 
 
 st.markdown('Turma Modelagem Espacial 2023-2 UNIFAL-MG Campus Varginha')
