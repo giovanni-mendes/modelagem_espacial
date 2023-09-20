@@ -1,19 +1,5 @@
 import streamlit as st
 
-st.markdown(
-        """
-        <style>
-            [data-testid="stSidebarNav"] {
-                background-image: url(https://i.imgur.com/UxsOhf4.png);
-                background-repeat: no-repeat;
-                padding-top: 250px;
-                background-position: 20px 20px;
-            }
-  
-        </style>
-        """,
-        unsafe_allow_html=True,
-)
 
 st.write("# Análise do Geoespacial do IFDM")
 
