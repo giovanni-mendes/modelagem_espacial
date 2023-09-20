@@ -4,9 +4,9 @@ st.markdown(
         """
         <style>
             [data-testid="stSidebarNav"] {
-                background-image: url(https://i.imgur.com/P3lS05T.png);
+                background-image: url(https://i.imgur.com/7Jbq8hs.png);
                 background-repeat: no-repeat;
-                padding-top: 120px;
+                padding-top: 150px;
                 background-position: 20px 20px;
             }
   
