@@ -5,6 +5,21 @@ import plotly.express as px
 from urllib.request import urlopen
 import json
 
+st.markdown(
+        """
+        <style>
+            [data-testid="stSidebarNav"] {
+                background-image: url(https://i.imgur.com/7Jbq8hs.png);
+                background-repeat: no-repeat;
+                padding-top: 150px;
+                background-position: 20px 20px;
+            }
+  
+        </style>
+        """,
+        unsafe_allow_html=True,
+)
+
 
 @st.cache_data
 def gerar_df():
