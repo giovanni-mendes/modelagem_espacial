@@ -1,6 +1,6 @@
 import streamlit as st
 
-  st.markdown(
+st.markdown(
         """
         <style>
             [data-testid="stSidebarNav"] {
@@ -13,6 +13,7 @@ import streamlit as st
         </style>
         """,
         unsafe_allow_html=True,
+)
 
 st.write("# Análise do Geoespacial do IFDM")
 
