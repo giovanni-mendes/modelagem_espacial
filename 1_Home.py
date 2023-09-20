@@ -25,7 +25,7 @@ st.markdown(
 st.video('https://www.youtube.com/watch?v=IxisjjHDn7A&embeds_referring_euri=https%3A%2F%2Fwww.firjan.com.br%2F&source_ve_path=MjM4NTE&feature=emb_title&ab_channel=Firjan',  start_time=0)
 
 st.markdown(
-    f'<a href="{'https://www.firjan.com.br/ifdm/'}" style="display: inline-block; padding: 12px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; font-size: 16px; border-radius: 4px;">Acesse a Base de Dados</a>',
+    f'<a href="{'www.firjan.com.br/ifdm/'}" style="display: inline-block; padding: 12px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; font-size: 16px; border-radius: 4px;">Acesse a Base de Dados</a>',
     unsafe_allow_html=True
 )
 
@@ -34,17 +34,17 @@ st.write("## Autor")
 
 st.markdown('Desenvolvido por Giovanni Mendes Lima')
 st.markdown(
-    f'<a href="{'https://github.com/giovanni-mendes'}" style="display: inline-block; padding: 12px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; font-size: 16px; border-radius: 4px;">Acesse meu GitHub</a>',
+    f'<a href="{'github.com/giovanni-mendes'}" style="display: inline-block; padding: 12px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; font-size: 16px; border-radius: 4px;">Acesse meu GitHub</a>',
     unsafe_allow_html=True
 )
 
 st.markdown(
-    f'<a href="{'https://colab.research.google.com/drive/1ek8NBTldiTL33ycftvMLjusD5U_pYI3w?usp=sharing'}" style="display: inline-block; padding: 12px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; font-size: 16px; border-radius: 4px;">Notebook do Google Colab</a>',
+    f'<a href="{'colab.research.google.com/drive/1ek8NBTldiTL33ycftvMLjusD5U_pYI3w?usp=sharing'}" style="display: inline-block; padding: 12px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; font-size: 16px; border-radius: 4px;">Notebook do Google Colab</a>',
     unsafe_allow_html=True
 )
 
 st.markdown(
-    f'<a href="{'https://publicacoes.unifal-mg.edu.br/revistas/index.php/cei/article/view/2159'}" style="display: inline-block; padding: 12px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; font-size: 16px; border-radius: 4px;">Artigo aplicando os dados do IFDM em uma regressão linear múltipla</a>',
+    f'<a href="{'publicacoes.unifal-mg.edu.br/revistas/index.php/cei/article/view/2159'}" style="display: inline-block; padding: 12px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; font-size: 16px; border-radius: 4px;">Artigo aplicando os dados do IFDM em uma regressão linear múltipla</a>',
     unsafe_allow_html=True
 
 st.markdown('Turma Modelagem Espacial 2023-2 UNIFAL-MG Campus Varginha')
