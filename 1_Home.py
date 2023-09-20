@@ -1,5 +1,4 @@
 import streamlit as st
-import webbrowser
 
 
 st.write("# Análise do Geoespacial do IFDM")
