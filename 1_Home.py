@@ -1,7 +1,6 @@
 import streamlit as st
 
-with st.sidebar:
-            st.subheader('Páginas')
+st.sidebar.title('Páginas')
 
 st.write("# Análise do Geoespacial do IFDM")
 
