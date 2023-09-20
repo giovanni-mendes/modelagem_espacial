@@ -24,34 +24,28 @@ st.markdown(
 
 st.video('https://www.youtube.com/watch?v=IxisjjHDn7A&embeds_referring_euri=https%3A%2F%2Fwww.firjan.com.br%2F&source_ve_path=MjM4NTE&feature=emb_title&ab_channel=Firjan',  start_time=0)
 
-URL_STRING = "https://streamlit.io/"
-
 st.markdown(
-    f'<a href="{URL_STRING}" style="display: inline-block; padding: 12px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; font-size: 16px; border-radius: 4px;">Action Text on Button</a>',
+    f'<a href="{'https://www.firjan.com.br/ifdm/'}" style="display: inline-block; padding: 12px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; font-size: 16px; border-radius: 4px;">Acesse a Base de Dados</a>',
     unsafe_allow_html=True
 )
 
-btn = st.button('Acesse a Base de Dados')
-if btn:
-    webbrowser.open_new('https://www.firjan.com.br/ifdm/')
 
 st.write("## Autor")
 
 st.markdown('Desenvolvido por Giovanni Mendes Lima')
-btn_2 = st.button('Acesse meu GitHub')
+st.markdown(
+    f'<a href="{'https://github.com/giovanni-mendes'}" style="display: inline-block; padding: 12px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; font-size: 16px; border-radius: 4px;">Acesse meu GitHub</a>',
+    unsafe_allow_html=True
+)
 
-if btn_2:
-    webbrowser.open_new('https://github.com/giovanni-mendes')
+st.markdown(
+    f'<a href="{'https://colab.research.google.com/drive/1ek8NBTldiTL33ycftvMLjusD5U_pYI3w?usp=sharing'}" style="display: inline-block; padding: 12px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; font-size: 16px; border-radius: 4px;">Notebook do Google Colab</a>',
+    unsafe_allow_html=True
+)
 
-btn_3 = st.button('Notebook do Google Colab')
-if btn_3:
-    webbrowser.open_new('https://colab.research.google.com/drive/1ek8NBTldiTL33ycftvMLjusD5U_pYI3w?usp=sharing')
-
-btn_4 = st.button(
-    'Artigo aplicando os dados do IFDM em uma regressão linear múltipla')
-if btn_4:
-    webbrowser.open_new('https://publicacoes.unifal-mg.edu.br/revistas/index.php/cei/article/view/2159')
-
+st.markdown(
+    f'<a href="{'https://publicacoes.unifal-mg.edu.br/revistas/index.php/cei/article/view/2159'}" style="display: inline-block; padding: 12px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; font-size: 16px; border-radius: 4px;">Artigo aplicando os dados do IFDM em uma regressão linear múltipla</a>',
+    unsafe_allow_html=True
 
 st.markdown('Turma Modelagem Espacial 2023-2 UNIFAL-MG Campus Varginha')
 
