@@ -8,7 +8,7 @@ st.markdown(
             [data-testid="stSidebarNav"] {
                 background-image: url(https://i.imgur.com/UxsOhf4.png
                 background-repeat: no-repeat;
-                padding-top: 150px;
+                padding-top: 250px;
                 background-position: 20px 20px;
             }
   
