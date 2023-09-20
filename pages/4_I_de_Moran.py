@@ -1,6 +1,23 @@
 import streamlit as st
 import pandas as pd
 
+
+st.markdown(
+        """
+        <style>
+            [data-testid="stSidebarNav"] {
+                background-image: url(https://i.imgur.com/7Jbq8hs.png);
+                background-repeat: no-repeat;
+                padding-top: 150px;
+                background-position: 20px 20px;
+            }
+  
+        </style>
+        """,
+        unsafe_allow_html=True,
+)
+
+
 st.write('# I de Moran para o Brasil')
 
 st.markdown(
