@@ -31,10 +31,10 @@ st.markdown(
     'Para realizar a análise foi utilizado o IFDM dos municípios do ano de 2016')
 
 st.write('## IFDM para os municípios')
-st.markdown('Intervalos desiguais')
+st.markdown('Intervalos de IFDM baseado nos Quantis')
 st.image('imagens/ifdm_mun.png')
 
-st.markdown('Intervalos homogêneos')
+st.markdown('Intervalos homogêneos de IFDM')
 st.image('imagens/ifdm_mun_h.png')
 
 st.write('## Estatística I de Moran para o Brasil')
