@@ -40,7 +40,7 @@ st.image('imagens/ifdm_mun_h.png')
 
 with st.expander("Veja a Interpretação"):
     st.write("""
-        É possível observar que os municípios mais desenvolvidos se concentram nas regiões centro-oeste, sudeste e sul.
+        É possível observar que os municípios mais desenvolvidos se concentram nas regiões Centro-oeste, Sudeste e Sul.
     """)
 
 st.write('## Estatística I de Moran para o Brasil')
@@ -77,9 +77,11 @@ with st.expander("Veja a Explicação"):
              
         - Não significativo (ns)
 
-        É possível observar que há vários clusters espaciais HH no sul, sudeste e centro-oeste.
+        É possível observar que há vários clusters espaciais HH no Sul, Sudeste e Centro-oeste.
 
-        Também há cluester espaciais do tipo LL no norte do país.
+        Também há cluester espaciais do tipo LL no Norte do país.
+
+        Por fim, há outliers espaciais do tipo HL no Norte do país. 
     """)
 
 hide_st_style = """
