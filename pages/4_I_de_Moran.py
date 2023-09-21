@@ -37,6 +37,12 @@ st.image('imagens/ifdm_mun.png')
 st.markdown('Intervalos homogêneos de IFDM')
 st.image('imagens/ifdm_mun_h.png')
 
+
+with st.expander("Veja a Interpretação"):
+    st.write("""
+        É possível observar que os municípios mais desenvolvidos se concentram nas regiões centro-oeste, sudeste e sul.
+    """)
+
 st.write('## Estatística I de Moran para o Brasil')
 st.markdown('Valor Encontrado: ')
 i = pd.Series([0.47], name='I de Moran', index=['Estatística'])
@@ -70,6 +76,10 @@ with st.expander("Veja a Explicação"):
         - Outliers espaciais  (-): High-Low (HL), Low-High (LH)
              
         - Não significativo (ns)
+
+        É possível observar que há vários clusters espaciais HH no sul, sudeste e centro-oeste.
+
+        Também há cluester espaciais do tipo LL no norte do país.
     """)
 
 hide_st_style = """
