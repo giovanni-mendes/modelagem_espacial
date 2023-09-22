@@ -38,7 +38,7 @@ lista_escolha =      ['Baixo',
 
 df['desenvolvimento'] = np.select(lista_condicoes, lista_escolha)
 
-fig = px.pie(df, 'desenvolvimento')
+fig = px.pie(df, 'desenvolvimento', width=800, height=400)
 fig.update_layout(title='Proporção de Desenvolvimento do Brasil')
 st.plotly_chart(fig, use_container_width=True)
 
