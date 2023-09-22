@@ -19,10 +19,10 @@ def gerar_df():
 
 coluna = 'IFDM'
 
-lista_condicoes =  [df_alvo[coluna] < 0.4,
-                    df_alvo[coluna] < 0.6,
-                    df_alvo[coluna] < 0.8,
-                    df_alvo[coluna] <= 1]
+lista_condicoes =  [df[coluna] < 0.4,
+                    df[coluna] < 0.6,
+                    df[coluna] < 0.8,
+                    df[coluna] <= 1]
 
 lista_escolha =      ['Baixo',
                      'Regular',
