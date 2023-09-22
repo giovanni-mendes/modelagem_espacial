@@ -18,6 +18,10 @@ def gerar_df():
     return df
 
 df = gerar_df()
+df['Código'] = df['Código'].astype(str)
+df['Ano'] = df['Ano'].astype(str)
+df.replace('*', 0, inplace=True)
+df.iloc[:, 5:-1].astype(float)
 
 coluna = 'IFDM'
 
