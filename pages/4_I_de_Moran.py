@@ -17,6 +17,8 @@ def gerar_df():
     df = pd.read_excel('datasets/IFDM_visualizacao.xlsx')
     return df
 
+df = gerar_df()
+
 coluna = 'IFDM'
 
 lista_condicoes =  [df[coluna] < 0.4,
