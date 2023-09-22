@@ -1,5 +1,9 @@
 import streamlit as st
 import pandas as pd
+import plotly.express as px
+
+
+
 
 st.set_page_config(
     page_title="Modelagem Espacial",
@@ -8,6 +12,28 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+@st.cache_data
+def gerar_df():
+    df = pd.read_excel('datasets/IFDM_visualizacao.xlsx')
+    return df
+
+coluna = 'IFDM'
+
+lista_condicoes =  [df_alvo[coluna] < 0.4,
+                    df_alvo[coluna] < 0.6,
+                    df_alvo[coluna] < 0.8,
+                    df_alvo[coluna] <= 1]
+
+lista_escolha =      ['Baixo',
+                     'Regular',
+                     'Moderado',
+                     'Alto']
+
+df['desenvolvimento'] = np.select(lista_condicoes, lista_escolha)
+
+fig = px.pie(br, 'desenvolvimento')
+fig.update_layout(title='Proporção de Desenvolvimento do Brasil')
+st.plotly_chart(fig, use_container_width=True)
 
 st.markdown(
         """
