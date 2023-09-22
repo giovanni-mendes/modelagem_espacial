@@ -73,8 +73,6 @@ st.markdown(
 
 st.markdown('Turma Modelagem Espacial 2023-2 UNIFAL-MG Campus Varginha')
 
-y = st.slider('Teste', min_value = 2005, max_value=2016, step=1)
-
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
