@@ -60,7 +60,7 @@ lista_escolha =      ['Baixo',
 
 df['desenvolvimento'] = np.select(lista_condicoes, lista_escolha)
 
-fig = px.pie(df, 'desenvolvimento', width=1200, height=800)
+fig = px.pie(df, 'desenvolvimento', width=800, height=800)
 st.plotly_chart(fig, use_container_width=True)
 
 st.write('## IFDM para os municípios')
