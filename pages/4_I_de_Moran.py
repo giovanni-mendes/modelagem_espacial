@@ -13,8 +13,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-@st.cache_data
-
 st.markdown(
         """
         <style>
@@ -60,7 +58,7 @@ lista_escolha =      ['Baixo',
 
 df['desenvolvimento'] = np.select(lista_condicoes, lista_escolha)
 
-fig = px.pie(df, 'desenvolvimento', width=800, height=800)
+fig = px.pie(df, 'desenvolvimento', width=400, height=500)
 st.plotly_chart(fig, use_container_width=True)
 
 st.write('## IFDM para os municípios')
