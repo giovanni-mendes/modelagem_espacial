@@ -79,7 +79,7 @@ with st.expander("Veja a Explicação"):
 
         É possível observar que há vários clusters espaciais HH no Sul, Sudeste e Centro-oeste.
 
-        Também há cluester espaciais do tipo LL no Norte do país.
+        Também há cluster espaciais do tipo LL no Norte do país.
 
         Por fim, há outliers espaciais do tipo HL no Norte do país. 
     """)
