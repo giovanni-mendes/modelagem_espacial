@@ -14,6 +14,28 @@ st.set_page_config(
 )
 
 @st.cache_data
+
+st.markdown(
+        """
+        <style>
+            [data-testid="stSidebarNav"]::before {
+                content: "Páginas";
+                margin-left: 20px;
+                margin-top: 20px;
+                font-size: 30px;
+                position: relative;
+                top: 100px;
+            }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+st.write('# I de Moran para o Brasil')
+
+st.markdown(
+    'Para realizar a análise foi utilizado o IFDM dos municípios do ano de 2016')
+
 def gerar_df():
     df = pd.read_excel('datasets/IFDM_visualizacao.xlsx')
     return df
@@ -38,30 +60,8 @@ lista_escolha =      ['Baixo',
 
 df['desenvolvimento'] = np.select(lista_condicoes, lista_escolha)
 
-fig = px.pie(df, 'desenvolvimento', width=800, height=400)
-fig.update_layout(title='Proporção de Desenvolvimento do Brasil')
+fig = px.pie(df, 'desenvolvimento', width=1200, height=800)
 st.plotly_chart(fig, use_container_width=True)
-
-st.markdown(
-        """
-        <style>
-            [data-testid="stSidebarNav"]::before {
-                content: "Páginas";
-                margin-left: 20px;
-                margin-top: 20px;
-                font-size: 30px;
-                position: relative;
-                top: 100px;
-            }
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
-
-st.write('# I de Moran para o Brasil')
-
-st.markdown(
-    'Para realizar a análise foi utilizado o IFDM dos municípios do ano de 2016')
 
 st.write('## IFDM para os municípios')
 st.markdown('Intervalos de IFDM baseado nos Quantis')
