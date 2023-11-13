@@ -36,8 +36,6 @@ st.markdown(
 
 st.image('imagens/interpreta_ifdm.jpg')
 
-st.write(df['IFDM'].loc[df['Ano'] == 2016].loc[(df.iloc[:, 5:] > 0).all(axis=1)].describe())
-
 @st.cache_data
 def gerar_df():
     df = pd.read_excel('datasets/IFDM_visualizacao.xlsx')
@@ -60,6 +58,8 @@ lista_escolha =      ['Baixo',
                      'Regular',
                      'Moderado',
                      'Alto']
+
+st.write(df['IFDM'].loc[df['Ano'] == 2016].loc[(df.iloc[:, 5:] > 0).all(axis=1)].describe())
 
 df['desenvolvimento'] = np.select(lista_condicoes, lista_escolha)
 
