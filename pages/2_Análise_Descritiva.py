@@ -44,18 +44,18 @@ st.header('Análise Descritiva dos Dados')
 st.markdown('df.head()')
 st.write(df.head())
 
-st.markdown('df.info()')
+st.markdown('Info')
 buffer = io.StringIO()
 df.info(buf=buffer)
 info = buffer.getvalue()
 st.text(info)
 
-st.markdown('df.isnull().sum()')
+st.markdown('Isnull')
 vazio = df.isnull().sum()
 vazio.name = 'Quantidade de Nulos'
 st.write(vazio)
 
-st.markdown('df.describe()')
+st.markdown('Describe')
 anos = list(df['Ano'].unique())
 ano_selecionado = st.selectbox('Selecione o Ano', anos)
 st.write(df.loc[df['Ano'] == ano_selecionado].loc[(df.iloc[:, 5:] > 0).all(axis=1)].describe())
