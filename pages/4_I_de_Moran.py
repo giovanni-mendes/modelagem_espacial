@@ -143,7 +143,7 @@ with st.expander("Veja a Explicação"):
 
         Também há cluster espaciais do tipo LL no Norte do país.
 
-        Por fim, há outliers espaciais do tipo HL no Norte do país. 
+        Por fim, há outliers espaciais do tipo HL no Norte/Nordeste do país. 
     """)
 
 hide_st_style = """
