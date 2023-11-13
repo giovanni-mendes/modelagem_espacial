@@ -64,7 +64,7 @@ lista_escolha =      ['Baixo',
 df['desenvolvimento'] = np.select(lista_condicoes, lista_escolha)
 
 anos = list(df['Ano'].unique())
-st.write(df.loc[df['Ano'] == anos[-1].describe())
+st.write(df.loc[df['Ano'] == anos[-1]].describe())
 
 st.write('## Proporção de Desenvolvimento Municipal em 2016')
 
