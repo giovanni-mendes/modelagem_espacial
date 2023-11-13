@@ -61,24 +61,18 @@ df['desenvolvimento'] = np.select(lista_condicoes, lista_escolha)
 
 st.write('## Proporção de Desenvolvimento Municipal em 2016')
 
-fig = px.pie(df.loc[df['Ano']=='2016'], 'desenvolvimento', width=400, height=500)
-st.plotly_chart(fig, use_container_width=True)
-
-
 fig =  px.pie(df.loc[df['Ano']=='2016'], 
        names='desenvolvimento',
        hole = 0.5,
        color='desenvolvimento',
+        width=400,
+        height=500.
        color_discrete_map={'Alto': 'green', 
                            'Moderado':'#04033d', 
                            'Regular': '#700270',
                            'Baixo':'red'})
 
-fig.update_layout(
-    title_text="Proporção de Indivíduos por cada Classe de Glicemia",
-    annotations=[dict(text='Glicemia', x=0.5, y=0.5, font_size=20, showarrow=False)])
-
-
+fig.update_layout(annotations=[dict(text='Desenvolvimento', x=0.5, y=0.5, font_size=20, showarrow=False)])
 st.plotly_chart(fig, use_container_width=True)
 
 
