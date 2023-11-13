@@ -66,7 +66,7 @@ fig =  px.pie(df.loc[df['Ano']=='2016'],
        hole = 0.5,
        color='desenvolvimento',
         width=400,
-        height=500.
+        height=500,
        color_discrete_map={'Alto': 'green', 
                            'Moderado':'#04033d', 
                            'Regular': '#700270',
