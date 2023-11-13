@@ -181,6 +181,7 @@ with st.expander("Veja a Interpretação"):
         - A média do índice IFDM para o ano de 2016 foi de 0.6679, ou seja, em média, o desenvolvimento mineiro é moderado;
         - O valor mínimo de desenvolvimento foi de 0.4568 do município Bertópolis];
         - O valor máximo de desenvolvimento foi de 0.8586 do município Patos de Minas.
+        """)
 
 st.write('## Proporção de Desenvolvimento Municipal em Minas Gerais no 2016')
 
@@ -197,3 +198,13 @@ fig =  px.pie(mg.loc[df['Ano']=='2016'],
 
 fig.update_layout(annotations=[dict(text='Desenvolvimento', x=0.5, y=0.5, font_size=20, showarrow=False)])
 st.plotly_chart(fig, use_container_width=True)
+
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
