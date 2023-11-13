@@ -84,6 +84,9 @@ st.image('imagens/ifdm_mun.png')
 st.markdown('Intervalos homogêneos de IFDM')
 st.image('imagens/ifdm_mun_h.png')
 
+st.markdown('Mapa Fisher Jenks')
+st.image('imagens/ifdm_fisher_jenks_mun.png')
+
 
 with st.expander("Veja a Interpretação"):
     st.write("""
