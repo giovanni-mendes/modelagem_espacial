@@ -63,7 +63,7 @@ lista_escolha =      ['Baixo',
 
 df['desenvolvimento'] = np.select(lista_condicoes, lista_escolha)
 
-st.write(df['IFDM'].loc[(df['Ano'] == 2016]) & (df['IFDM'] > 0])).describe()
+st.write(df['IFDM'].loc[(df['Ano'] == 2016) & (df['IFDM'] > 0)].describe())
 
 st.write('## Proporção de Desenvolvimento Municipal em 2016')
 
