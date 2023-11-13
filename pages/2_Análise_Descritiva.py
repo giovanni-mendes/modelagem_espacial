@@ -41,7 +41,7 @@ df.iloc[:, 5:-1].astype(float)
 
 st.header('Análise Descritiva dos Dados')
 
-st.markdown('df.head()')
+st.markdown('Head')
 st.write(df.head())
 
 st.markdown('Info')
