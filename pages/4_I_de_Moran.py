@@ -198,9 +198,6 @@ fig =  px.pie(mg.loc[df['Ano']=='2016'],
 fig.update_layout(annotations=[dict(text='Desenvolvimento', x=0.5, y=0.5, font_size=20, showarrow=False)])
 st.plotly_chart(fig, use_container_width=True)
 
-
-
-
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
