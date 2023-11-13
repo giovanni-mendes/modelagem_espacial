@@ -55,8 +55,11 @@ vazio = df.isnull().sum()
 vazio.name = 'Quantidade de Nulos'
 st.write(vazio)
 
+anos = list(df['Ano'].unique())
+ano_selecionado = st.selectbox('Selecione o Ano', anos)
 st.markdown('df.describe()')
-st.write(df.loc[(df.iloc[:, 5:] > 0).all(axis=1)].describe())
+st.write(df.loc[df['Ano'] == ano_selecionado].loc[(df.iloc[:, 5:] > 0).all(axis=1)].describe())
+
 
 hide_st_style = """
             <style>
