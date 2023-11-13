@@ -179,7 +179,7 @@ with st.expander("Veja a Interpretação"):
     st.write("""
         - Observações para cerca de 839 municípios (IFDM positivo);
         - A média do índice IFDM para o ano de 2016 foi de 0.6679, ou seja, em média, o desenvolvimento mineiro é moderado;
-        - O valor mínimo de desenvolvimento foi de 0.4568 do município Bertópolis];
+        - O valor mínimo de desenvolvimento foi de 0.4568 do município Bertópolis;
         - O valor máximo de desenvolvimento foi de 0.8586 do município Patos de Minas.
         """)
 
@@ -198,6 +198,77 @@ fig =  px.pie(mg.loc[df['Ano']=='2016'],
 
 fig.update_layout(annotations=[dict(text='Desenvolvimento', x=0.5, y=0.5, font_size=20, showarrow=False)])
 st.plotly_chart(fig, use_container_width=True)
+
+st.write('## IFDM para os municípios mineiros')
+st.markdown('Intervalos de IFDM baseado nos Quantis')
+st.image('imagens/mg_ifdm.png')
+
+with st.expander("Veja a Interpretação"):
+    st.write("""
+        - Mínimo: 0
+        - 1° Quartil: 0.63
+        - 2° Quartil: 0.68
+        - 3° Quartil: 0.72
+        - Máximo: 0.86
+
+        Cerca de 50% dos municípios mineiros têm desenvolvimento abaixo de 0.68, isto é, pelo indicador IFDM, grande parte dos municípios pode ser classificado como regular/moderado.
+    """)
+
+st.markdown('Intervalos homogêneos de IFDM')
+st.image('imagens/mg_ifdm_h.png')
+
+st.markdown('Mapa Fisher Jenks')
+st.image('imagens/mg_fisher_jenks.png')
+
+
+with st.expander("Veja a Interpretação"):
+    st.write("""
+        É possível observar que os municípios mais desenvolvidos se concentram nas regiões Centro-oeste, Sudeste e Sul.
+    """)
+
+st.write('## Estatística I de Moran para Minas Gerais')
+st.markdown('Valor Encontrado: ')
+i = pd.Series([0.19], name='I de Moran', index=['Estatística'])
+st.write(i)
+
+st.markdown('P-valor:')
+p = pd.Series([0.001], name='P-valor', index=['Estatística'])
+st.write(p)
+
+with st.expander("Veja a Interpretação"):
+    st.write("""
+        A estatística de I de Moran foi positiva, indicando clusters espaciais.
+             
+        Além disso, como o p-valor é inferior a 0.05, constata-se que é uma estatística significativa.
+    """)
+
+st.markdown('Diagrama de Dispersão de Moran')
+st.image('imagens/mg_moran_d.png')
+
+st.image('imagens/mg_moran_d2.png')
+
+st.write('## Mapa Lisa Cluster')
+st.image('imagens/mg_lisa_cluster.png')
+with st.expander("Veja a Explicação"):
+    st.write("""
+        O mapa Lisa Cluster identifica os clusters e os outliers espaciais:
+             
+        - Cluesters espaciais (+): High-High (HH), Low-Low (LL)
+        
+        - Outliers espaciais  (-): High-Low (HL), Low-High (LH)
+             
+        - Não significativo (ns)
+
+        É possível observar que há vários clusters espaciais HH no Sul e Centro-oeste do Estado.
+
+        Também há cluster espaciais do tipo LL no Norte, Nordeste e Sudeste do Estado.
+
+        Há outliers espaciais do tipo HL no Nordeste/Sudeste do Estado.
+
+        Por fim, há outliers espaciais  do tipo LH no Oeste e Sul do Estado.
+        
+    """)
+
 
 
 hide_st_style = """
