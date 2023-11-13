@@ -81,6 +81,18 @@ st.write('## IFDM para os municípios')
 st.markdown('Intervalos de IFDM baseado nos Quantis')
 st.image('imagens/ifdm_mun.png')
 
+
+with st.expander("Veja a Interpretação"):
+    st.write("""
+        - Mínimo: 0
+        - 1° Quartil: 0.6
+        - 2° Quartil: 0.67
+        - 3° Quartil: 0.74
+        - Máximo: 0.9
+
+        Cerca de 50% dos municípios brasileiros têm desenvolvimento abaixo de 0.67, isto é, pelo indicador IFDM, grande parte dos municípios pode ser classificado como regular/moderado.
+    """)
+
 st.markdown('Intervalos homogêneos de IFDM')
 st.image('imagens/ifdm_mun_h.png')
 
