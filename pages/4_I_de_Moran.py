@@ -167,7 +167,7 @@ with st.expander("Veja a Explicação"):
     """)
 
 
-st.write('#  I de Moran para o Minas Gerais')
+st.write('# I de Moran para o Minas Gerais')
 
 mg = df.loc[df['UF'] == 'MG']
 st.markdown(
