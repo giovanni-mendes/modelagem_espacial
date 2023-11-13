@@ -63,8 +63,21 @@ lista_escolha =      ['Baixo',
 
 df['desenvolvimento'] = np.select(lista_condicoes, lista_escolha)
 
+
+st.markdown(
+    'Describe IFDM 2016')
 anos = list(df['Ano'].unique())
 st.write(df['IFDM'].loc[(df['Ano'] == anos[-1]) & (df['IFDM'] > 0)].describe())
+
+with st.expander("Veja a Interpretação"):
+    st.write("""
+        - Observações para cerca de 5.441 municípios (IFDM positivo);
+        - A média do índice IFDM para o ano de 2016 foi de 0.6678, ou seja, em média, o desenvolvimento brasileiro é moderado;
+        - O valor mínimo de desenvolvimento foi de 0.3214 do município de Ipixuna no Amazonas.
+        - O valor máximo de desenvolvimento foi de 0.9006 do município de Louveira em São Paulo.
+    """)
+
+
 
 st.write('## Proporção de Desenvolvimento Municipal em 2016')
 
