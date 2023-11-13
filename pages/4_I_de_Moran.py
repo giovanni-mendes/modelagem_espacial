@@ -34,6 +34,8 @@ st.write('# I de Moran para o Brasil')
 st.markdown(
     'Para realizar a análise foi utilizado o IFDM dos municípios do ano de 2016')
 
+st.image('imagens/interpreta_ifdm.jpg')
+
 @st.cache_data
 def gerar_df():
     df = pd.read_excel('datasets/IFDM_visualizacao.xlsx')
@@ -57,7 +59,25 @@ lista_escolha =      ['Baixo',
                      'Moderado',
                      'Alto']
 
+
+
 df['desenvolvimento'] = np.select(lista_condicoes, lista_escolha)
+
+
+st.markdown(
+    'Describe IFDM 2016 para o Brasil')
+anos = list(df['Ano'].unique())
+st.write(df['IFDM'].loc[(df['Ano'] == anos[-1]) & (df['IFDM'] > 0)].describe())
+
+with st.expander("Veja a Interpretação"):
+    st.write("""
+        - Observações para cerca de 5.441 municípios (IFDM positivo);
+        - A média do índice IFDM para o ano de 2016 foi de 0.6678, ou seja, em média, o desenvolvimento brasileiro é moderado;
+        - O valor mínimo de desenvolvimento foi de 0.3214 do município de Ipixuna no Amazonas;
+        - O valor máximo de desenvolvimento foi de 0.9006 do município de Louveira em São Paulo.
+    """)
+
+
 
 st.write('## Proporção de Desenvolvimento Municipal em 2016')
 
@@ -145,6 +165,40 @@ with st.expander("Veja a Explicação"):
 
         Por fim, há outliers espaciais do tipo HL no Norte/Nordeste do país. 
     """)
+
+
+st.write('# I de Moran para o Minas Gerais')
+
+mg = df.loc[df['UF'] == 'MG']
+st.markdown(
+    'Describe IFDM 2016 para Minas Gerais')
+
+st.write(mg['IFDM'].loc[(mg['Ano'] == anos[-1]) & (mg['IFDM'] > 0)].describe())
+
+with st.expander("Veja a Interpretação"):
+    st.write("""
+        - Observações para cerca de 839 municípios (IFDM positivo);
+        - A média do índice IFDM para o ano de 2016 foi de 0.6679, ou seja, em média, o desenvolvimento mineiro é moderado;
+        - O valor mínimo de desenvolvimento foi de 0.4568 do município Bertópolis];
+        - O valor máximo de desenvolvimento foi de 0.8586 do município Patos de Minas.
+        """)
+
+st.write('## Proporção de Desenvolvimento Municipal em Minas Gerais no 2016')
+
+fig =  px.pie(mg.loc[df['Ano']=='2016'], 
+       names='desenvolvimento',
+       hole = 0.5,
+       color='desenvolvimento',
+        width=600,
+        height=600,
+       color_discrete_map={'Alto': 'green', 
+                           'Moderado':'#04033d', 
+                           'Regular': '#700270',
+                           'Baixo':'red'})
+
+fig.update_layout(annotations=[dict(text='Desenvolvimento', x=0.5, y=0.5, font_size=20, showarrow=False)])
+st.plotly_chart(fig, use_container_width=True)
+
 
 hide_st_style = """
             <style>
