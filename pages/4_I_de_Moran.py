@@ -36,6 +36,7 @@ st.markdown(
 
 st.image('imagens/interpreta_ifdm.jpg')
 
+st.write(df['IFDM'].loc[df['Ano'] == 2016].loc[(df.iloc[:, 5:] > 0).all(axis=1)].describe())
 
 @st.cache_data
 def gerar_df():
