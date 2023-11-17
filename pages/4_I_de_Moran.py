@@ -105,8 +105,7 @@ fig = px.histogram(df.loc[(df['IFDM'] > 0) & df['Ano']=='2016'],
 
 fig.update_yaxes(title='Densidade de Probabilidade', row=1, col=1)
 fig.update_xaxes(title='IFDM', row=1, col=1)
-
-fig.show()
+st.plotly_chart(fig, use_container_width=True)
 
 
 
