@@ -95,7 +95,7 @@ fig =  px.pie(df.loc[df['Ano']=='2016'],
 fig.update_layout(annotations=[dict(text='Desenvolvimento', x=0.5, y=0.5, font_size=20, showarrow=False)])
 st.plotly_chart(fig, use_container_width=True)
 
-
+df = df.loc[df['Ano] == '2016']
 fig = px.histogram(df, 
                    x="IFDM",
                    marginal="box",
