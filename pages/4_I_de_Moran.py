@@ -96,7 +96,7 @@ fig.update_layout(annotations=[dict(text='Desenvolvimento', x=0.5, y=0.5, font_s
 st.plotly_chart(fig, use_container_width=True)
 
 df = df.loc[df['Ano] == '2016']
-fig = px.histogram(df, 
+fig = px.histogram(df.loc[df['IFDM'] > 0], 
                    x="IFDM",
                    marginal="box",
                    color_discrete_sequence=['#0f9dd1'],
