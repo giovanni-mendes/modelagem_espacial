@@ -78,6 +78,20 @@ with st.expander("Veja a Interpretação"):
     """)
 
 
+st.write('## Distribuição do IFDM em 2016')
+
+df = df.loc[df['Ano'] ==  anos[-1]]
+fig = px.histogram(df.loc[df['IFDM'] > 0], 
+                   x="IFDM",
+                   marginal="box",
+                   color_discrete_sequence=['#0f9dd1'],
+                   histnorm='probability density'
+                   )
+
+fig.update_yaxes(title='Densidade de Probabilidade', row=1, col=1)
+fig.update_xaxes(title='IFDM', row=1, col=1)
+st.plotly_chart(fig, use_container_width=True)
+
 
 st.write('## Proporção de Desenvolvimento Municipal em 2016')
 
@@ -94,19 +108,6 @@ fig =  px.pie(df.loc[df['Ano'] == anos[-1]],
 
 fig.update_layout(annotations=[dict(text='Desenvolvimento', x=0.5, y=0.5, font_size=20, showarrow=False)])
 st.plotly_chart(fig, use_container_width=True)
-
-df = df.loc[df['Ano'] ==  anos[-1]]
-fig = px.histogram(df.loc[df['IFDM'] > 0], 
-                   x="IFDM",
-                   marginal="box",
-                   color_discrete_sequence=['#0f9dd1'],
-                   histnorm='probability density'
-                   )
-
-fig.update_yaxes(title='Densidade de Probabilidade', row=1, col=1)
-fig.update_xaxes(title='IFDM', row=1, col=1)
-st.plotly_chart(fig, use_container_width=True)
-
 
 
 st.write('## IFDM para os municípios')
