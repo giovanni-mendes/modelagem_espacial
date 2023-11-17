@@ -34,7 +34,7 @@ st.write('# I de Moran para o Brasil')
 st.markdown(
     'Para realizar a análise foi utilizado o IFDM dos municípios do ano de 2016')
 
-st.image('imagens/interpreta_ifdm.jpg')
+st.image('imagens/interpreta_ifdm.png')
 
 @st.cache_data
 def gerar_df():
