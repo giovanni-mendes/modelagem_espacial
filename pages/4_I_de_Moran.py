@@ -81,7 +81,7 @@ with st.expander("Veja a Interpretação"):
 
 st.write('## Proporção de Desenvolvimento Municipal em 2016')
 
-fig =  px.pie(df.loc[df['Ano']=='2016'], 
+fig =  px.pie(df.loc[df['Ano'] == anos[-1]], 
        names='desenvolvimento',
        hole = 0.5,
        color='desenvolvimento',
