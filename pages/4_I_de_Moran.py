@@ -96,6 +96,19 @@ fig.update_layout(annotations=[dict(text='Desenvolvimento', x=0.5, y=0.5, font_s
 st.plotly_chart(fig, use_container_width=True)
 
 
+fig = px.histogram(df.loc[(df['IFDM'] > 0) & df['Ano']=='2016'], 
+                   x="IFDM",
+                   marginal="box",
+                   color_discrete_sequence=['#0f9dd1'],
+                   histnorm='probability density'
+                   )
+
+fig.update_yaxes(title='Densidade de Probabilidade', row=1, col=1)
+fig.update_xaxes(title='IFDM', row=1, col=1)
+
+fig.show()
+
+
 
 st.write('## IFDM para os municípios')
 st.markdown('Intervalos de IFDM baseado nos Quantis')
