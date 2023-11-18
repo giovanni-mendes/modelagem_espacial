@@ -244,7 +244,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 variavel= 'IFDM'
 mg_2 = br.loc[br['UF'] == '2016']
-grupos = pd.DataFrame(mg_2.groupby('nome_meso')[variavel].mean().sort_values(ascending=False))
+grupos = pd.DataFrame(mg_2.groupby('nome_meso')[variavel].mean().sort_values(ascending=False)).reset_index()
 fig = px.bar(grupos, 
              x='nome_meso',
              y=variavel,
