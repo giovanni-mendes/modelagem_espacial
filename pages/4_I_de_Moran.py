@@ -206,9 +206,13 @@ with st.expander("Veja a Interpretação"):
         - O valor máximo de desenvolvimento foi de 0.8586 do município Patos de Minas.
         """)
 
-st.write(br.head())
+st.write('## Melhores municípios de Minas Gerais em 2016')
+st.write(mg.loc[(mg['Ano'] == anos[-1]) & (mg['IFDM'] > 0)].sort_values(by='IFDM', ascending=False).head())
 
-st.write('## Proporção de Desenvolvimento Municipal em Minas Gerais no 2016')
+st.write('## Piores municípios de Minas Gerais em 2016')
+st.write(mg.loc[(mg['Ano'] == anos[-1]) & (mg['IFDM'] > 0)].sort_values(by='IFDM', ascending=True).head())
+
+st.write('## Proporção de Desenvolvimento Municipal em Minas Gerais em 2016')
 
 fig =  px.pie(mg.loc[df['Ano']=='2016'], 
        names='desenvolvimento',
