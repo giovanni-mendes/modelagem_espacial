@@ -190,8 +190,7 @@ st.write('# I de Moran para o Minas Gerais')
 def gerar_br():
     br = pd.read_excel('datasets/br.csv')
     return br
-    
-br = gerar_df()
+br = gerar_br()
 
 mg = df.loc[df['UF'] == 'MG']
 st.markdown(
