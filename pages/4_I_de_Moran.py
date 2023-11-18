@@ -77,6 +77,11 @@ with st.expander("Veja a Interpretação"):
         - O valor máximo de desenvolvimento foi de 0.9006 do município de Louveira em São Paulo.
     """)
 
+st.write('## Melhores municípios do Brasil')
+st.write(df['IFDM'].sort_values(ascending=False).head(5))
+
+st.write('## Piores municípios do Brasil')
+st.write(df.loc[df['IFDM'] > 0]['IFDM'].sort_values(ascending=True).head(5))
 
 st.write('## Distribuição do IFDM em 2016')
 
