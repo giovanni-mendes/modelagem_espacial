@@ -187,6 +187,12 @@ with st.expander("Veja a Explicação"):
 
 st.write('# I de Moran para o Minas Gerais')
 
+def gerar_br():
+    br = pd.read_excel('datasets/br.csv')
+    return br
+    
+br = gerar_df()
+
 mg = df.loc[df['UF'] == 'MG']
 st.markdown(
     'Describe IFDM 2016 para Minas Gerais')
@@ -200,6 +206,8 @@ with st.expander("Veja a Interpretação"):
         - O valor mínimo de desenvolvimento foi de 0.4568 do município Bertópolis;
         - O valor máximo de desenvolvimento foi de 0.8586 do município Patos de Minas.
         """)
+
+st.write(br.head())
 
 st.write('## Proporção de Desenvolvimento Municipal em Minas Gerais no 2016')
 
