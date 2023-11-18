@@ -242,6 +242,7 @@ fig =  px.pie(mg.loc[df['Ano']=='2016'],
 fig.update_layout(annotations=[dict(text='Desenvolvimento', x=0.5, y=0.5, font_size=20, showarrow=False)])
 st.plotly_chart(fig, use_container_width=True)
 
+st.write('## Desenvolvimento médio por mesorregião mineira')
 variavel= 'IFDM'
 mg_2 = br.loc[br['UF'] == 'MG']
 grupos = pd.DataFrame(mg_2.groupby('nome_meso')[variavel].mean().sort_values(ascending=False)).reset_index()
@@ -263,7 +264,7 @@ fig.update_layout(
     height=600,
 )
 
-fig.update_traces(textfont_size=20, 
+fig.update_traces(textfont_size=18, 
                   textangle=0, 
                   textposition="outside")
 
