@@ -243,7 +243,7 @@ fig.update_layout(annotations=[dict(text='Desenvolvimento', x=0.5, y=0.5, font_s
 st.plotly_chart(fig, use_container_width=True)
 
 variavel= 'IFDM'
-mg_2 = br.loc[(br['UF'] == 'MG') & (br['Ano'] == '2016')]
+mg_2 = br.loc[br['UF'] == 'MG']
 grupos = pd.DataFrame(mg_2.groupby('nome_meso')[variavel].mean().sort_values(ascending=False)).reset_index()
 fig = px.bar(grupos, 
              x='nome_meso',
