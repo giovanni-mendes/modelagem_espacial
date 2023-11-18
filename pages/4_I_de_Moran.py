@@ -242,6 +242,30 @@ fig =  px.pie(mg.loc[df['Ano']=='2016'],
 fig.update_layout(annotations=[dict(text='Desenvolvimento', x=0.5, y=0.5, font_size=20, showarrow=False)])
 st.plotly_chart(fig, use_container_width=True)
 
+variavel= 'IFDM'
+mg_2 = br.loc[br['UF'] == '2016']
+grupos = pd.DataFrame(mg_2.groupby('nome_meso')[variavel].mean().sort_values(ascending=False))
+fig = px.bar(grupos, 
+             x='nome_meso',
+             y=variavel,
+             text=grupos['IFDM'].apply(lambda x: '{:.2f}%'.format(x*100)),
+             color='nome_meso')
+
+fig.update_layout(xaxis={'categoryorder':'total descending'})
+                 
+fig.update_layout({
+'plot_bgcolor': 'rgba(0, 0, 0, 0)',
+})
+
+fig.update_traces(textfont_size=14, 
+                  textangle=0, 
+                  textposition="outside")
+
+fig.update_yaxes(title='Percentual %')
+fig.update_xaxes(title='IFDM médio')
+st.plotly_chart(fig, use_container_width=True)
+
+
 st.write('## IFDM para os municípios mineiros')
 st.markdown('Intervalos de IFDM baseado nos Quantis')
 st.image('imagens/mg_ifdm.png')
