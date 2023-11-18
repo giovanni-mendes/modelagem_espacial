@@ -213,7 +213,7 @@ st.write('## Piores municípios de Minas Gerais em 2016')
 st.write(mg.loc[(mg['Ano'] == anos[-1]) & (mg['IFDM'] > 0)].sort_values(by='IFDM', ascending=True).head())
 
 st.write('## Distribuição do IFDM em Minas Gerais para o ano de2016')
-mg = mg.loc[mg'Ano'] ==  anos[-1]]
+mg = mg.loc[mg['Ano'] ==  anos[-1]]
 fig = px.histogram(mg.loc[mg['IFDM'] > 0], 
                    x="IFDM",
                    marginal="box",
