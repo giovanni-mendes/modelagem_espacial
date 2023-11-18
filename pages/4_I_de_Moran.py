@@ -348,7 +348,7 @@ st.write('# I de Moran para as Microrregiões de Minas Gerais')
 mg_micro = mg_2.groupby('nome_micro').mean().reset_index()
 st.markdown(
     'Describe IFDM 2016 para as Microrregiões de Minas Gerais')
-st.write(mg_micro.iloc[:, 1].describe())
+st.write(mg_micro.iloc[:, 2].describe())
 
 
 
