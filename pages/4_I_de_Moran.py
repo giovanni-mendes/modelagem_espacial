@@ -78,10 +78,10 @@ with st.expander("Veja a Interpretação"):
     """)
 
 st.write('## Melhores municípios do Brasil')
-st.write(df['IFDM'].sort_values(ascending=False).head(5))
+st.write(df.sort_values(by='IFDM' ,ascending=False).head(5))
 
 st.write('## Piores municípios do Brasil')
-st.write(df.loc[df['IFDM'] > 0]['IFDM'].sort_values(ascending=True).head(5))
+st.write(df.loc[df['IFDM'] > 0].sort_values(by='IFDM', ascending=True).head(5))
 
 st.write('## Distribuição do IFDM em 2016')
 
