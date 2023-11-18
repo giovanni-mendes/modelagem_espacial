@@ -417,7 +417,7 @@ with st.expander("Veja a Interpretação"):
 st.markdown('Diagrama de Dispersão de Moran')
 st.image('imagens/mg_micro_moran_d.png')
 
-st.image('imagens/mg_micro_moran_d_2.png')
+st.image('imagens/mg_micro_moran_d2.png')
 
 
 st.write('## Mapa Lisa Cluster')
