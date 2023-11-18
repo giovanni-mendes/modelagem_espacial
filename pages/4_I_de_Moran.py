@@ -187,6 +187,11 @@ with st.expander("Veja a Explicação"):
 
 st.write('# I de Moran para o Minas Gerais')
 
+def gerar_br():
+    br = pd.read_csv('datasets/br.csv', encoding='latin-1', sep=',')
+    return br
+br = gerar_br()
+
 mg = df.loc[df['UF'] == 'MG']
 st.markdown(
     'Describe IFDM 2016 para Minas Gerais')
@@ -201,7 +206,27 @@ with st.expander("Veja a Interpretação"):
         - O valor máximo de desenvolvimento foi de 0.8586 do município Patos de Minas.
         """)
 
-st.write('## Proporção de Desenvolvimento Municipal em Minas Gerais no 2016')
+st.write('## Melhores municípios de Minas Gerais em 2016')
+st.write(mg.loc[(mg['Ano'] == anos[-1]) & (mg['IFDM'] > 0)].sort_values(by='IFDM', ascending=False).head())
+
+st.write('## Piores municípios de Minas Gerais em 2016')
+st.write(mg.loc[(mg['Ano'] == anos[-1]) & (mg['IFDM'] > 0)].sort_values(by='IFDM', ascending=True).head())
+
+st.write('## Distribuição do IFDM em Minas Gerais para o ano de2016')
+mg = mg.loc[mg['Ano'] ==  anos[-1]]
+fig = px.histogram(mg.loc[mg['IFDM'] > 0], 
+                   x="IFDM",
+                   marginal="box",
+                   color_discrete_sequence=['#0f9dd1'],
+                   histnorm='probability density'
+                   )
+
+fig.update_yaxes(title='Densidade de Probabilidade', row=1, col=1)
+fig.update_xaxes(title='IFDM', row=1, col=1)
+st.plotly_chart(fig, use_container_width=True)
+
+
+st.write('## Proporção de Desenvolvimento Municipal em Minas Gerais em 2016')
 
 fig =  px.pie(mg.loc[df['Ano']=='2016'], 
        names='desenvolvimento',
@@ -216,6 +241,37 @@ fig =  px.pie(mg.loc[df['Ano']=='2016'],
 
 fig.update_layout(annotations=[dict(text='Desenvolvimento', x=0.5, y=0.5, font_size=20, showarrow=False)])
 st.plotly_chart(fig, use_container_width=True)
+
+st.write('## Desenvolvimento médio por mesorregião mineira')
+variavel= 'IFDM'
+mg_2 = br.loc[br['UF'] == 'MG']
+grupos = pd.DataFrame(mg_2.groupby('nome_meso')[variavel].mean().sort_values(ascending=False)).reset_index()
+fig = px.bar(grupos, 
+             x='nome_meso',
+             y=variavel,
+             text=grupos['IFDM'].apply(lambda x: '{:.2f}%'.format(x*100)),
+             color='nome_meso')
+
+fig.update_layout(xaxis={'categoryorder':'total descending'})
+                 
+fig.update_layout({
+'plot_bgcolor': 'rgba(0, 0, 0, 0)',
+})
+
+fig.update_layout(
+    autosize=False,
+    width=600,
+    height=600,
+)
+
+fig.update_traces(textfont_size=18, 
+                  textangle=0, 
+                  textposition="outside")
+
+fig.update_yaxes(title='Percentual %')
+fig.update_xaxes(title='IFDM médio')
+st.plotly_chart(fig, use_container_width=True)
+
 
 st.write('## IFDM para os municípios mineiros')
 st.markdown('Intervalos de IFDM baseado nos Quantis')
