@@ -188,7 +188,7 @@ with st.expander("Veja a Explicação"):
 st.write('# I de Moran para o Minas Gerais')
 
 def gerar_br():
-    br = pd.read_excel('datasets/br.csv')
+    br = pd.read_csv('datasets/br.csv', encoding='latin-1', sep=',')
     return br
 br = gerar_br()
 
