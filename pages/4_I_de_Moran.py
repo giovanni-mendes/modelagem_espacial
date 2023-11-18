@@ -344,6 +344,11 @@ with st.expander("Veja a Explicação"):
     """)
 
 
+st.write('# I de Moran para as Microrregiões de Minas Gerais')
+mg_micro = mg_2.groupby('nome_micro').mean().reset_index()
+st.write(mg_micro.describe())
+
+
 
 hide_st_style = """
             <style>
