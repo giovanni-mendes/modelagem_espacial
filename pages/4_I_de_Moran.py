@@ -259,11 +259,11 @@ fig.update_layout({
 
 fig.update_layout(
     autosize=False,
-    width=800,
-    height=800,
+    width=600,
+    height=600,
 )
 
-fig.update_traces(textfont_size=14, 
+fig.update_traces(textfont_size=20, 
                   textangle=0, 
                   textposition="outside")
 
