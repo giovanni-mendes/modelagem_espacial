@@ -257,6 +257,12 @@ fig.update_layout({
 'plot_bgcolor': 'rgba(0, 0, 0, 0)',
 })
 
+fig.update_layout(
+    autosize=False,
+    width=800,
+    height=800,
+)
+
 fig.update_traces(textfont_size=14, 
                   textangle=0, 
                   textposition="outside")
