@@ -345,7 +345,7 @@ with st.expander("Veja a Explicação"):
 
 
 st.write('# I de Moran para as Microrregiões de Minas Gerais')
-mg_micro = mg_2.groupby('nome_micro').mean().reset_index()
+mg_micro = pd_DataFrame(mg_2.groupby('nome_micro').mean()).reset_index()
 st.markdown(
     'Describe IFDM 2016 para as Microrregiões de Minas Gerais')
 st.write(mg_micro.iloc[:, 2].describe())
