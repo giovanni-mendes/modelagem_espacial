@@ -370,6 +370,76 @@ fig.update_yaxes(title='Densidade de Probabilidade', row=1, col=1)
 fig.update_xaxes(title='IFDM', row=1, col=1)
 st.plotly_chart(fig, use_container_width=True)
 
+st.write('## IFDM para as microrregiões de Minas Gerais')
+st.markdown('Intervalos de IFDM baseado nos Quantis')
+st.image('imagens/mg_micro_ifdm.png')
+
+
+with st.expander("Veja a Interpretação"):
+    st.write("""
+        - Mínimo: 0
+        - 1° Quartil: 0.6
+        - 2° Quartil: 0.67
+        - 3° Quartil: 0.74
+        - Máximo: 0.9
+
+        Cerca de 50% dos municípios brasileiros têm desenvolvimento abaixo de 0.67, isto é, pelo indicador IFDM, grande parte dos municípios pode ser classificado como regular/moderado.
+    """)
+
+st.markdown('Intervalos homogêneos de IFDM')
+st.image('imagens/mg_micro_ifdm_h.png')
+
+st.markdown('Mapa Fisher Jenks')
+st.image('imagens/mg_micro_fisher_jenks.png')
+
+
+with st.expander("Veja a Interpretação"):
+    st.write("""
+        É possível observar que os municípios mais desenvolvidos se concentram nas regiões Centro-oeste, Sudeste e Sul.
+    """)
+
+st.write('## Estatística I de Moran para o Brasil')
+st.markdown('Valor Encontrado: ')
+i = pd.Series([0.71], name='I de Moran', index=['Estatística'])
+st.write(i)
+
+st.markdown('P-valor:')
+p = pd.Series([0.001], name='P-valor', index=['Estatística'])
+st.write(p)
+
+with st.expander("Veja a Interpretação"):
+    st.write("""
+        A estatística de I de Moran foi positiva, indicando clusters espaciais.
+             
+        Além disso, como o p-valor é inferior a 0.05, constata-se que é uma estatística significativa.
+    """)
+
+st.markdown('Diagrama de Dispersão de Moran')
+st.image('imagens/mg_micro_moran_d.png')
+
+st.image('imagens/mg_micro_moran_d_2.png')
+
+
+st.write('## Mapa Lisa Cluster')
+st.image('imagens/mg_micro_lisa_cluster.png')
+with st.expander("Veja a Explicação"):
+    st.write("""
+        O mapa Lisa Cluster identifica os clusters e os outliers espaciais:
+             
+        - Cluesters espaciais (+): High-High (HH), Low-Low (LL)
+        
+        - Outliers espaciais  (-): High-Low (HL), Low-High (LH)
+             
+        - Não significativo (ns)
+
+        É possível observar que há vários clusters espaciais HH no Sul, Sudeste e Centro-oeste.
+
+        Também há cluster espaciais do tipo LL no Norte do país.
+
+        Por fim, há outliers espaciais do tipo HL no Norte/Nordeste do país. 
+    """)
+
+
 
 
 hide_st_style = """
