@@ -285,7 +285,7 @@ with st.expander("Veja a Interpretação"):
         - 3° Quartil: 0.72
         - Máximo: 0.86
 
-        Cerca de 50% dos municípios mineiros têm desenvolvimento abaixo de 0.68, isto é, pelo indicador IFDM, grande parte dos municípios pode ser classificado como regular/moderado.
+        Aparentemente a faixa entre de desenvolvimento moderado é representativa, apenas 25% dos municípios podem recebido a classificação de desenvolvimento regular.
     """)
 
 st.markdown('Intervalos homogêneos de IFDM')
@@ -377,13 +377,13 @@ st.image('imagens/mg_micro_ifdm.png')
 
 with st.expander("Veja a Interpretação"):
     st.write("""
-        - Mínimo: 0
-        - 1° Quartil: 0.6
-        - 2° Quartil: 0.67
-        - 3° Quartil: 0.74
-        - Máximo: 0.9
+        - Mínimo: 0.57
+        - 1° Quartil: 0.64
+        - 2° Quartil: 0.68
+        - 3° Quartil: 0.71
+        - Máximo: 0.77
 
-        Cerca de 50% dos municípios brasileiros têm desenvolvimento abaixo de 0.67, isto é, pelo indicador IFDM, grande parte dos municípios pode ser classificado como regular/moderado.
+        O valor máximo obtido em desenvolvimento médio foi de 0.77, isto é, na média, nenhuma microrregião mineira conseguiu atingir a marca de desenvolvimento alto.
     """)
 
 st.markdown('Intervalos homogêneos de IFDM')
@@ -395,7 +395,7 @@ st.image('imagens/mg_micro_fisher_jenks.png')
 
 with st.expander("Veja a Interpretação"):
     st.write("""
-        É possível observar que os municípios mais desenvolvidos se concentram nas regiões Centro-oeste, Sudeste e Sul.
+        É possível observar que os municípios mais desenvolvidos se concentram nas regiões Centro-oeste, Oeste, Sudeste e Sul.
     """)
 
 st.write('## Estatística I de Moran para o Brasil')
@@ -432,11 +432,11 @@ with st.expander("Veja a Explicação"):
              
         - Não significativo (ns)
 
-        É possível observar que há vários clusters espaciais HH no Sul, Sudeste e Centro-oeste.
+        É possível observar que há vários clusters espaciais HH no Oeste, Centro-Oeste e Sul.
 
-        Também há cluster espaciais do tipo LL no Norte do país.
+        Também há cluster espaciais do tipo LL no Centro e Nordeste do Estado.
 
-        Por fim, há outliers espaciais do tipo HL no Norte/Nordeste do país. 
+        Por fim, há outliers espaciais do tipo LH no Sul do Estado. 
     """)
 
 
