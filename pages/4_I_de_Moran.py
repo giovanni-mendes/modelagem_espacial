@@ -185,7 +185,7 @@ with st.expander("Veja a Explicação"):
     """)
 
 
-st.write('# I de Moran para o Minas Gerais')
+st.write('# I de Moran para Minas Gerais')
 
 def gerar_br():
     br = pd.read_csv('datasets/br.csv', encoding='latin-1', sep=',')
@@ -342,6 +342,33 @@ with st.expander("Veja a Explicação"):
         Por fim, há outliers espaciais  do tipo LH no Oeste e Sul do Estado.
         
     """)
+
+
+st.write('# I de Moran para as Microrregiões de Minas Gerais')
+mg_micro = pd.DataFrame(mg_2.groupby('nome_micro').mean()).reset_index()
+st.markdown(
+    'Describe IFDM 2016 para as Microrregiões de Minas Gerais')
+st.write(mg_micro.iloc[:, 2].describe())
+
+with st.expander("Veja a Interpretação"):
+    st.write("""
+        - Observações para cerca de 66 microrregiões (IFDM positivo);
+        - A média do índice IFDM para o ano de 2016 foi de 0.6733, ou seja, em média, o desenvolvimento das microrregiões é moderado;
+        - O valor mínimo de desenvolvimento foi de 0.5678 da microrregião de Nanuque;
+        - O valor máximo de desenvolvimento foi de 0.7704 da microrregião de Divinópolis.
+    """)
+    
+st.write('## Distribuição do IFDM em Minas Gerais para o ano de2016')
+fig = px.histogram(mg_micro.loc[mg_micro['IFDM'] > 0], 
+                   x="IFDM",
+                   marginal="box",
+                   color_discrete_sequence=['#0f9dd1'],
+                   histnorm='probability density'
+                   )
+
+fig.update_yaxes(title='Densidade de Probabilidade', row=1, col=1)
+fig.update_xaxes(title='IFDM', row=1, col=1)
+st.plotly_chart(fig, use_container_width=True)
 
 
 
