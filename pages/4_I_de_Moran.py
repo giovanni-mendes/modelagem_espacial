@@ -259,8 +259,8 @@ fig = px.bar(grupos,
 
 fig.update_layout(xaxis={'categoryorder':'total descending'})
 
-fig.update_xaxes(title_font_color="black", tickfont_size=2)
-                 
+fig.update_xaxes(title_font_color="black")
+
 fig.update_layout({
 'plot_bgcolor': 'rgba(0, 0, 0, 0)',
 })
