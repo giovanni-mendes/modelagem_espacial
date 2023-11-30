@@ -133,7 +133,7 @@ with st.expander("Veja a Interpretação"):
         - 3° Quartil: 0.74
         - Máximo: 0.9
 
-        Cerca de 50% dos municípios brasileiros têm desenvolvimento abaixo de 0.67, isto é, pelo indicador IFDM, grande parte dos municípios pode ser classificado como regular/moderado.
+         Aparentemente a faixa entre de desenvolvimento moderado é representativa, apenas 25% dos municípios podem ter recebido a classificação de desenvolvimento regular/baixo.
     """)
 
 st.markdown('Intervalos homogêneos de IFDM')
@@ -301,7 +301,7 @@ with st.expander("Veja a Interpretação"):
         - 3° Quartil: 0.72
         - Máximo: 0.86
 
-        Aparentemente a faixa entre de desenvolvimento moderado é representativa, apenas 25% dos municípios podem recebido a classificação de desenvolvimento regular.
+        Aparentemente a faixa entre de desenvolvimento moderado é representativa, apenas 25% dos municípios podem ter recebido a classificação de desenvolvimento regular/baixo.
     """)
 
 st.markdown('Intervalos homogêneos de IFDM')
