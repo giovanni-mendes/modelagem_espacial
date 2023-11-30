@@ -214,6 +214,13 @@ with st.expander("Veja a Interpretação"):
 st.write('## Melhores municípios de Minas Gerais em 2016')
 st.write(mg.loc[(mg['Ano'] == anos[-1]) & (mg['IFDM'] > 0)].sort_values(by='IFDM', ascending=False).head())
 
+with st.expander("Curiosidades sobre Patos de Minas"):
+    st.write("""
+     Grande destaque no agronegócio nacional, na produção de grãos, referência em genética suína e a primeira cidade em captação e qualidade do leite em Minas Gerais e a segunda do país.
+
+     Vários fatores contribuem para o sucesso econômico e social do município, entre eles a localização estratégica, que liga a cidade a grandes centros comerciais como São Paulo, Uberlândia e Belo Horizonte, facilitando o intercâmbio comercial, o desenvolvimento ordenado e a qualidade de vida da população.
+      """)
+
 st.write('## Piores municípios de Minas Gerais em 2016')
 st.write(mg.loc[(mg['Ano'] == anos[-1]) & (mg['IFDM'] > 0)].sort_values(by='IFDM', ascending=True).head())
 
@@ -448,7 +455,10 @@ with st.expander("Veja a Explicação"):
         Por fim, há outliers espaciais do tipo LH no Sul do Estado. 
     """)
 
-
+st.write('# Conclusão')
+st.markdown(
+    '- Em todas as análises espaciais de desenvolvimento ficou confirmado uma autocorrelação positiva significativa. A análise espacial das microrregiões mineiras foi a que apresentou o maior I de Moran, demonstrando forte tendência de clusters espaciais. Desse modo, pode-se afirmar que, para o Brasil, os municípios, geralmente, estão localizados perto de vizinhos com a mesma característica de desenvolvimento.'
+)
 
 
 hide_st_style = """
