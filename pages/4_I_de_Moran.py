@@ -80,6 +80,11 @@ with st.expander("Veja a Interpretação"):
 st.write('## Melhores municípios do Brasil')
 st.write(df.loc[df['Ano'] == anos[-1]].sort_values(by='IFDM' ,ascending=False).head(5))
 
+with st.expander("Curiosidades sobre Louveira"):
+    st.write("""
+       Um dos pontos fortes que contribuem para tornar a cidade essa potência econômica é a localização. O município está situado entre dois importantes pólos industriais e tecnológicos (Jundiaí e Campinas), a menos de 30 km do Aeroporto de Viracopos, o maior terminal de cargas do país, e tem fácil acesso ao Rodoanel Mário Covas, que é conexão para o porto de Santos. 
+    """)
+
 st.write('## Piores municípios do Brasil')
 st.write(df.loc[(df['IFDM'] > 0) & (df['Ano'] == anos[-1])].sort_values(by='IFDM', ascending=True).head(5))
 
