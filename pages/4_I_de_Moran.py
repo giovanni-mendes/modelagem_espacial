@@ -133,7 +133,7 @@ with st.expander("Veja a Interpretação"):
         - 3° Quartil: 0.74
         - Máximo: 0.9
 
-         Aparentemente a faixa entre de desenvolvimento moderado é representativa, apenas 25% dos municípios podem ter recebido a classificação de desenvolvimento regular/baixo.
+         Aparentemente a faixa de desenvolvimento moderado é representativa, apenas 25% dos municípios podem ter recebido a classificação de desenvolvimento regular/baixo.
     """)
 
 st.markdown('Intervalos homogêneos de IFDM')
@@ -299,9 +299,9 @@ with st.expander("Veja a Interpretação"):
         - 1° Quartil: 0.63
         - 2° Quartil: 0.68
         - 3° Quartil: 0.72
-        - Máximo: 0.86
+        - Máximo: 0.86a
 
-        Aparentemente a faixa entre de desenvolvimento moderado é representativa, apenas 25% dos municípios podem ter recebido a classificação de desenvolvimento regular/baixo.
+        A faixa de desenvolvimento moderado continuou significativa, entretanto, o desenvolvimento apontado pelo primeiro qurntil aumentou, quando comparado ao Brasil, de 0.6 para 0.63.
     """)
 
 st.markdown('Intervalos homogêneos de IFDM')
@@ -353,7 +353,7 @@ with st.expander("Veja a Explicação"):
 
         Também há cluster espaciais do tipo LL no Norte, Nordeste e Sudeste do Estado.
 
-        Há outliers espaciais do tipo HL no Nordeste/Sudeste do Estado.
+        Há outliers espaciais do tipo HL no Nordeste, Centro, Sudeste e Sul do Estado.
 
         Por fim, há outliers espaciais  do tipo LH no Oeste e Sul do Estado.
         
