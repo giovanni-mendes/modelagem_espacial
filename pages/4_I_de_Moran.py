@@ -261,13 +261,14 @@ fig.update_layout(xaxis={'categoryorder':'total descending'})
                  
 fig.update_layout({
 'plot_bgcolor': 'rgba(0, 0, 0, 0)',
- showlegend=False
 })
+
 
 fig.update_layout(
     autosize=False,
     width=600,
     height=600,
+    showlegend = False
 )
 
 fig.update_traces(textfont_size=18, 
