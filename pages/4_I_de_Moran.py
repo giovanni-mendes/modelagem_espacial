@@ -82,7 +82,7 @@ st.write(df.loc[df['Ano'] == anos[-1]].sort_values(by='IFDM' ,ascending=False).h
 
 with st.expander("Curiosidades sobre Louveira"):
     st.write("""
-       Um dos pontos fortes que contribuem para tornar a cidade essa potência econômica é a localização. O município está situado entre dois importantes pólos industriais e tecnológicos (Jundiaí e Campinas), a menos de 30 km do Aeroporto de Viracopos, o maior terminal de cargas do país, e tem fácil acesso ao Rodoanel Mário Covas, que é conexão para o porto de Santos. 
+       Um dos pontos fortes que contribuem para tornar a cidade essa potência econômica é a localização. O município está situado entre dois importantes pólos industriais e tecnológicos (Jundiaí e Campinas), a menos de 30 km do Aeroporto de Viracopos, o maior terminal de cargas do país, e tem fácil acesso ao Rodoanel Mário Covas, que é conexão para o porto de Santos.
     """)
 
 st.write('## Piores municípios do Brasil')
@@ -206,7 +206,7 @@ st.write(mg['IFDM'].loc[(mg['Ano'] == anos[-1]) & (mg['IFDM'] > 0)].describe())
 with st.expander("Veja a Interpretação"):
     st.write("""
         - Observações para cerca de 839 municípios (IFDM positivo);
-        - A média do índice IFDM para o ano de 2016 foi de 0.6679, ou seja, em média, o desenvolvimento mineiro é moderado;
+        - A média do índice IFDM para o ano de 2016 foi de 0.6679, ou seja, em média, o desenvolvimento mineiro é moderado e é um pouco maior que a média do Brasil;
         - O valor mínimo de desenvolvimento foi de 0.4568 do município Bertópolis;
         - O valor máximo de desenvolvimento foi de 0.8586 do município Patos de Minas.
         """)
@@ -261,6 +261,7 @@ fig.update_layout(xaxis={'categoryorder':'total descending'})
                  
 fig.update_layout({
 'plot_bgcolor': 'rgba(0, 0, 0, 0)',
+ showlegend=False
 })
 
 fig.update_layout(
